@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast App</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="weather.css" />
+</head>
+
+<body class="min-h-screen bg-gray-100 transition-all">
+
+  <div class="max-w-xl mx-auto p-6 mt-10 bg-white rounded-2xl shadow-xl">
+    <h1 class="text-3xl font-bold text-center mb-6">🌤 Weather Forecast</h1>
+
+    <!-- Search -->
+    <div class="flex gap-2 mb-4">
+      <input
+        id="cityInput"
+        type="text"
+        placeholder="Enter city name"
+        class="flex-1 border p-2 rounded-xl"
+      />
+      <button
+        id="searchBtn"
+        class="bg-blue-500 text-white px-4 rounded-xl"
+      >
+        Search
+      </button>
+    </div>
+
+    <!-- Current Location -->
+    <button
+      id="currentLocationBtn"
+      class="w-full bg-green-500 text-white p-2 rounded-xl mb-4"
+    >
+      📍 Use Current Location
+    </button>
+
+    <!-- Recent Cities -->
+    <select
+      id="recentCities"
+      class="hidden w-full border p-2 rounded-xl mb-4"
+    ></select>
+
+    <!-- Error Message -->
+    <p id="errorMsg" class="text-red-500 text-center hidden mb-4"></p>
+
+    <!-- Weather Info -->
+    <div id="weatherBox" class="hidden bg-blue-50 p-4 rounded-xl mb-4"></div>
+
+    <!-- Forecast -->
+    <h2 class="text-xl font-semibold mb-2">5-Day Forecast</h2>
+    <div id="forecast" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>
+
